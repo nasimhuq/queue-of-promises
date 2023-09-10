@@ -1,7 +1,7 @@
-# promise-queue
+# queue-of-promises
 **Queue of promises. All promises are executed concurrently as they are added to the input queue. Regardless of which promise resolved earlier, output queue will always keep the order it was executed**
 
-Zero-dependency, total size: **`1749 B` uncompressed and `1002 B` gzip-compressed**
+Zero-dependency, total size: **`1755 B` uncompressed and `1002 B` gzip-compressed**
 
 Output queue returns an object `{ config, data, error }`
   * On successful response, `data` will contain the response body.
@@ -10,19 +10,19 @@ Output queue returns an object `{ config, data, error }`
 
 # Install
 
-`npm install --save @nasimhuq/promise-queue`
+`npm install --save @nasimhuq/queue-of-promises`
 
 # Typical usage
 
 Require as **CJS**
 
 ```js
-const { Queue } = require('@nasimhuq/promise-queue');
+const { Queue } = require('@nasimhuq/queue-of-promises');
 ```
 
 Import as **ES6 Module**
 ```js
-import { Queue } from '@nasimhuq/promise-queue';
+import { Queue } from '@nasimhuq/queue-of-promises';
 ```
 
 # Examples
@@ -30,7 +30,7 @@ import { Queue } from '@nasimhuq/promise-queue';
 Example 1: Single batch of requests
 
 ```js
-import promiseQueue from '@nasimhuq/promise-queue'
+import queueOfPromises from '@nasimhuq/queue-of-promises'
 
 const api = (config) => {
     return new Promise((resolve, reject) => {
@@ -96,7 +96,7 @@ const reqConfigList = [
 ]
 
 const test_single_batch = async (resolve) => {
-    const { inputQueue, outputQueue } = promiseQueue(api)
+    const { inputQueue, outputQueue } = queueOfPromises(api)
     reqConfigList.forEach((config) => {
         inputQueue.next(config)
     })
@@ -115,7 +115,7 @@ const test_single_batch = async (resolve) => {
 }
 
 const test_multiple_batches = async (resolve) => {
-    const { inputQueue, outputQueue, closeQueue } = promiseQueue(api, true, 500)
+    const { inputQueue, outputQueue, closeQueue } = queueOfPromises(api, true, 500)
     inputQueue.next(reqConfigList[0])
     inputQueue.next(reqConfigList[1])
     inputQueue.next(reqConfigList[2])
@@ -169,5 +169,5 @@ allTests()
 
 ```
 
-# promise-queue can be used in node.js
+# queue-of-promises can be used in node.js
 

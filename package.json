@@ -1,19 +1,19 @@
 {
-  "name": "@nasimhuq/promise-queue",
-  "version": "0.1.0",
+  "name": "@nasimhuq/queue-of-promises",
+  "version": "0.1.1",
   "description": "Queue of promises",
   "type": "module",
   "exports": {
     ".": "./index.js"
   },
   "scripts": {
-    "build": "esbuild index.js --bundle --outfile=des/promise-queue.js",
-    "browser-build": "esbuild index.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outfile=des/promise-queue.js",
-    "test": "node tests/promise-queue.test.js"
+    "build": "esbuild index.js --bundle --outfile=des/queue-of-promises.js",
+    "browser-build": "esbuild index.js --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outfile=des/queue-of-promises.js",
+    "test": "node tests/queue-of-promises.test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nasimhuq/promise-queue.git"
+    "url": "git+https://github.com/nasimhuq/queue-of-promises.git"
   },
   "keywords": [
     "Promise",
@@ -22,10 +22,13 @@
   "author": "Nasim Huq",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nasimhuq/promise-queue/issues"
+    "url": "https://github.com/nasimhuq/queue-of-promises/issues"
   },
-  "homepage": "https://github.com/nasimhuq/promise-queue#readme",
+  "homepage": "https://github.com/nasimhuq/queue-of-promises#readme",
   "devDependencies": {
     "esbuild": "^0.19.2"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
   }
 }

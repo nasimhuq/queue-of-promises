@@ -1,4 +1,4 @@
-export const promiseQueue = (api, batch = false, delay = 1000) => {
+export const queueOfPromises = (api, batch = false, delay = 1000) => {
     let kill = !batch
     const queue = []
 
@@ -64,4 +64,4 @@ export const promiseQueue = (api, batch = false, delay = 1000) => {
     }
 }
 
-export default promiseQueue
+export default queueOfPromises
