@@ -1,6 +1,6 @@
 {
   "name": "@nasimhuq/queue-of-promises",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Queue of promises",
   "type": "module",
   "exports": {
@@ -21,6 +21,9 @@
   ],
   "author": "Nasim Huq",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "bugs": {
     "url": "https://github.com/nasimhuq/queue-of-promises/issues"
   },

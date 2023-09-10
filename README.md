@@ -17,12 +17,12 @@ Output queue returns an object `{ config, data, error }`
 Require as **CJS**
 
 ```js
-const { Queue } = require('@nasimhuq/queue-of-promises');
+const queueOfPromises = require('@nasimhuq/queue-of-promises');
 ```
 
 Import as **ES6 Module**
 ```js
-import { Queue } from '@nasimhuq/queue-of-promises';
+import queueOfPromises from '@nasimhuq/queue-of-promises';
 ```
 
 # Examples
