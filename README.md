@@ -1,7 +1,7 @@
 # queue-of-promises
 **Queue of promises. All promises are executed concurrently as they are added to the input queue. Regardless of which promise resolved earlier, output queue will always keep the order it was executed**
 
-To abort queue of promises please checkout [abort-promise-queue](https://www.npmjs.com/package/@nasimhuq/queue-of-promises)
+To abort queue of promises please checkout [abort-promise-queue](https://www.npmjs.com/package/@nasimhuq/abort-promise-queue)
 
 Zero-dependency, total size: **`1755 B` uncompressed and `1002 B` gzip-compressed**
 
